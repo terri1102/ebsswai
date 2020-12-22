@@ -80,4 +80,14 @@ plt.title("30% blended", fontsize=10)                       # 두 개의 조카 
 
 plt.show()
 
+# Step 4 합성한 이미지 저장하기
+pix5 = pix5*255
+im5 = pilimg.fromarray(pix5.astype(np.uint8)) #pillow 이용 # uint=8bit unsigned integer
+im5.save("BlendedPic_70.png")
+
+pix6 = pix6*255
+im6 = pilimg.fromarray(pix6.astype(np.uint8))
+im6.save("BlendedPic_30.png")
+
+
 
